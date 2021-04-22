@@ -16,34 +16,72 @@
     
     <?php
 
-
 if(isset($_REQUEST["email"])){
-    /* connect to gmail */
+    /* find which domain email is*/
+    $source =$_POST["email"];
+    preg_match('/@([^.]+)/i', $source, $match);
+    /*Select the good imap with the domain name*/
+    switch($match[1]){
+        case "gmail":
+            $host="imap.gmail.com";
+            break;
+        
+        case "outlook":
+        case "hotmail":
+        case "live":
+            $host="outlook.office365.com";
+            break;
+        
+        case "yahoo":
+            $host="imap.mail.yahoo.com";
+            break;
+       
+        case "icloud":
+            $host="imap.mail.me.com";
+            break;
+        
+        case "bluewin":
+        case "bluemail":
+            $host="imaps.bluewin.ch";
+            break;
 
-  //  var_dump($_POST["email"]);
-    $username = $_POST["email"];
-    $password = $_POST["password"];
-    $hostname ='{imap.gmail.com:993/imap/ssl}INBOX';
+        case "orange":
+        case "wanadoo":
+            $host="imap.orange.fr";
+            break;
 
-
-    $conn   = imap_open($hostname, $username, $password, OP_READONLY);
-
-    if (FALSE === $conn) {
-        $info = FALSE;
-        $err = 'La connexion a échoué. Vérifiez vos paramètres!';
-    } else {
-        $info = imap_check($conn);
-        imap_close($conn);
+        default:
+            $host = FALSE; 
+            break;
     }
+    
+    if($host === FALSE){
+        echo("Cette adresse mail n'est pas encore supportée");
+    }else{
+        /*if the email is recognised the connection of the mailbox began */
+        $username = $_POST["email"];
+        $password = $_POST["password"];
+        $hostname ='{'.$host.':993/imap/ssl}INBOX';
+   
+        $conn = imap_open($hostname, $username, $password, OP_READONLY);
 
-    if (FALSE === $info) {
-        echo $err;
-    } else {
-        echo 'La boite aux lettres contient '.$info->Nmsgs.' message(s)';
+        if (FALSE === $conn) {
+            $info = FALSE;
+            $err = 'La connexion a échoué. Vérifiez vos paramètres!';
+        } else {
+            $info = imap_check($conn);
+            imap_close($conn);
+        }
+
+        if (FALSE === $info) {
+            echo $err;
+        } else {
+            echo 'La boite aux lettres contient '.$info->Nmsgs.' message(s)';
+        }
     }
 }
 ?>
-        
+ 
     </body>
 </html>
 
