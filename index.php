@@ -19,11 +19,16 @@
 
 if(isset($_REQUEST["email"])){
     /* connect to gmail */
+    $source =$_POST["email"];
+    preg_match('/@([^.]+)/i', $source, $match);
+    var_dump($match[1]);
+
+    $host=$match[1];
 
   //  var_dump($_POST["email"]);
     $username = $_POST["email"];
     $password = $_POST["password"];
-    $hostname ='{imap.gmail.com:993/imap/ssl}INBOX';
+    $hostname ='{imap.'.$host.'.com:993/imap/ssl}INBOX';
 
 
     $conn   = imap_open($hostname, $username, $password, OP_READONLY);
