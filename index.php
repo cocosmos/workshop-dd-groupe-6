@@ -1,6 +1,6 @@
-
-<?php include 'header.php';?>
-
+<?php 
+include 'bdd.php';
+include 'header.php';?>
 <body>
 
     <p>Et si vous preniez conscience de l’énergie que conssomme votre boite mail…</p>
