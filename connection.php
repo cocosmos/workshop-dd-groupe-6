@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'bdd.php';
+
 
 ?>
 <form action="" method="post">
@@ -45,5 +45,5 @@ require 'bdd.php';
         }
 
     }
-        
+        */
         ?>
