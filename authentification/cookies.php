@@ -1,6 +1,6 @@
 <?php
-//setcookie("email", "test", time() + (86400 * 30), "/"); // 86400 = 1 day
-//setcookie("password", FALSE, time() + (86400 * 30), "/"); // 86400 = 1 day
+setcookie("email", NULL, time() + (86400 * 100), "/"); // 86400 = 1 day
+setcookie("password", NULL, time() + (86400 * 100), "/"); // 86400 = 1 day
 //setcookie("name", FALSE, time() + (86400 * 30), "/"); // 86400 = 1 day
 
 //print_r($_COOKIE);
