@@ -1,12 +1,5 @@
 <?php
-session_start();
-
-// Connexion à la base de données
-$host="localhost";
-$dbname="workshop";
-$admin="root";
-$db_password="";
-
+require ('../bdd_connect.php');
 $db = new PDO(
 'mysql:host='.$host.';dbname='.$dbname.'', 
 $admin, $db_password,   
