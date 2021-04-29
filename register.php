@@ -1,7 +1,7 @@
 <?php
     require "bdd.php";
     session_start();
-    if(!isset($_SESSION["email"])||!isset($_SESSION["password"])){
+    if(!isset($_REQUEST["email"])){
        echo" <form method='post'>
         <input type='text' placeholder='Prénom' name='fname' id='fname' required>
         <input type='text' placeholder='Nom' name='lname' id='lname' required>
@@ -58,27 +58,28 @@
                 echo "votre email n'est pas encore supporté essayez en un autre";//si email existe pas et qu il n est pas. ce fourniseur n est pas encore supportee utilsier un email de la liste suivante
             break;
         }
-    }
-    else if(isset($_REQUEST["password"])){
-        $_SESSION['password']=$_REQUEST["password"];
+        if(isset($_REQUEST["password"])){
+            $_SESSION['password']=$_REQUEST["password"];
+            
+            if(isset($_SESSION['email'])){
+                /*if the email is recognised the connection of the mailbox began */
+                $username = $_SESSION['email'];
+                $password = $_SESSION['password'];
+                $hostname ='{'.$_SESSION['host'].':993/imap/ssl}INBOX';
         
-        if(isset($_SESSION['email'])){
-            /*if the email is recognised the connection of the mailbox began */
-            $username = $_SESSION['email'];
-            $password = $_SESSION['password'];
-            $hostname ='{'.$_SESSION['host'].':993/imap/ssl}INBOX';
-    
-            $conn = imap_open($hostname, $username, $password, OP_READONLY);
-    
-            if (FALSE === $conn) {
-                $info = FALSE;
-                echo "La connexion a échoué. Réésayez en créant un autre mot de passe d'applications";
-            } else {
-                $info = imap_check($conn);
-                $_SESSION['info']=$info;
-                imap_close($conn);
-                header("Location: profile.php");
+                $conn = imap_open($hostname, $username, $password, OP_READONLY);
+        
+                if (FALSE === $conn) {
+                    $info = FALSE;
+                    echo "La connexion a échoué. Réésayez en créant un autre mot de passe d'applications";
+                } else {
+                    $info = imap_check($conn);
+                    $_SESSION['info']=$info;
+                    imap_close($conn);
+                    header("Location: profile.php");
+                }
             }
         }
     }
+    
 ?>

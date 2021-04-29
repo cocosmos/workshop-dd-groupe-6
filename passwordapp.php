@@ -48,6 +48,6 @@ if(isset($_SESSION["steps"])){
 }
 ?>
 <form action="" method="post">
-<input type="password" name="password" placeholder="Mot de passe d'applications" required>
-<button type='submit'>Submit</button>
+    <input type="password" name="password" placeholder="Mot de passe d'applications" required>
+    <button type='submit'>Submit</button>
 </form>
