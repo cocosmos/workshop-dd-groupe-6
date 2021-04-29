@@ -35,7 +35,6 @@
     }
     if(isset($_SESSION['info'])) {
         $mails=$_SESSION['info']->Nmsgs;
-        setcookie("mails", $mails, time() + (86400 * 100), "/"); // 86400 = 1 day
         $mailsrate=$mails * 0.006;
         
         //Un mail = 0.006kg 
@@ -51,22 +50,43 @@
         //1 kg de co2 = 12km en avion par personne
         echo "<a href='profile.php'>Refresh</a>";
         //https://www.faguo-store.com/fr/lunivers-faguo/lunivers-faguo/mission-engagements/mesurer/1kg-equivalent-de-co2/
-        echo (date('Y-m-d'));
         $data = [
             ':id' => "test1", // A FAIRE
-            ':mails' => $mails,
-            ':date' => date('Y-m-d H:i:s'),
+            ':data' => $mailsrate,
+            ':date' => date('Y-m-d'),
         ];
         
         //Add number of mails into the the bdd
         $response = $db->prepare(
-            "INSERT INTO user_data (user_id, user_data, data_date) VALUES (:id, :mails, :date)",
+            "INSERT INTO user_data (user_id, user_data, data_date) VALUES (:id, :data, :date)",
         
             [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]
         ); 
-        $response->execute($data); 
+        $response->execute($data);
+
+        //Data for the chart put into the json
+        $result = $db->prepare(
+            "SELECT user_data, data_date FROM user_data WHERE user_id='test1' GROUP BY data_date",
+            [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]
+        ); 
+        $result->execute();
+        
+        $row = $result->fetchAll(PDO::FETCH_ASSOC);
+        
+        $json = json_encode($row);
+        file_put_contents("data.json", $json); 
     }
     else{
         header("Location: register.php");
     }
 ?>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./chart.js"></script>
