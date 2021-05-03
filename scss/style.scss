@@ -3,7 +3,13 @@
 
 
 /* Components */
-@import 'text';
-@import 'header';
-@import 'footer';
+@import 'components/text';
 @import 'components/index';
+@import 'components/solution';
+@import 'components/profile';
+
+/*Layout*/
+
+@import 'layout/body';
+@import 'layout/footer';
+@import 'layout/header';
