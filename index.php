@@ -3,7 +3,7 @@ include 'bdd.php';
 include 'header.php';?>
 <body>
 
-    <p>Et si vous preniez conscience de l’énergie que conssomme votre boite mail…</p>
+    <p>Et si vous preniez conscience de l’énergie que consomme votre boite mail…</p>
 
     <img class="green_paperplane" src="..."> <!--METTRE IMAGE PAPERPLANE-->
 
