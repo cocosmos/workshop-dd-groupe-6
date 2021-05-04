@@ -20,5 +20,10 @@
             </ul>
         </div>
 
-           
+        <div class="profile">
+            <p><?php if(isset($_SESSION["name"])){
+            echo($_COOKIE["name"]);}?></p>
+            <a href="profile.php">voir le profil</a>
+           <!-- <a href="index.php" <?php //Se deconnecter ?>>se deconnecter</a>-->
+        </div>
     </Header>

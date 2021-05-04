@@ -1,0 +1,43 @@
+h2{
+    font-size: 2em;
+    color: $white;
+    font-family: $primary-font;
+}
+h3{
+    font-size: 2em;
+    color: $dark-green;
+    font-family: $primary-font;
+    font-weight: 500;
+}
+h5{
+    color:$white;
+    font-family: $secondary-font;
+    font-size: 1em;
+    margin: 0;
+}
+p{
+    font-family: $secondary-font;
+    font-size: 1.3em;
+
+}
+label{
+    font-family: $secondary-font;
+    font-size: 1.5em;
+}
+input{
+    font-family: $secondary-font;
+}
+
+.btn{
+    font-family: $secondary-font;
+    background-color: $light-green;
+    padding:15px 25px;
+    border-radius: 25px;
+    font-size: 2vh;
+    font-weight: 900;
+    border: none;
+    color:$dark-blue;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-decoration: none;
+}
