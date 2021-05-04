@@ -9,10 +9,9 @@ include 'header.php';?>
 
     <h1>E-Cobox vous aide à comprendre comment réduire sa Pollution numérique</h1>
 
-    <form action="connection.php" method="post">
-        <input type="email" placeholder="email" name="email" required>
-        <input type="password" name="password" placeholder="Mot de passe d'applications" required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="button">
+        <a href="connection.php">Connectez votre boîte mail</a>
+        <p>* E-Cobox s'engage à ne garder aucune information sur votre boîte mail</p>
+    </div>
 </body>
 <?php include 'footer.php';?>
