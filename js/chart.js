@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.ajax({
         //Chart get the data from json
-        url : "./data.json",
+        url : "./js/data.json",
         type : "GET",
         success : function(data){
             var user_data = [];

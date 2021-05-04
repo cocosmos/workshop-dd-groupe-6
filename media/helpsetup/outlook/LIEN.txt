@@ -1,0 +1,2 @@
+https://account.live.com/proofs/EnableTfa
+https://account.live.com/proofs/AppPassword?uaid=382668c8994f4552a6cfde5041b4bf26&mpsplit=2

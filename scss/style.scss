@@ -1,0 +1,18 @@
+/* Common */
+@import 'common/normalize';
+@import 'common/variables';
+
+
+/* Components */
+@import 'components/text';
+@import 'components/index';
+@import 'components/solution';
+@import 'components/profile';
+@import 'components/register';
+
+
+/*Layout*/
+
+@import 'layout/body';
+@import 'layout/footer';
+@import 'layout/header';
