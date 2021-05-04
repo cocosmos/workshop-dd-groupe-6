@@ -1,6 +1,6 @@
 .body__login{
     background-color:#0A4754;
-    margin: 0% auto;
+    margin: 0% ;
 
 }
 //Login Part
@@ -10,26 +10,27 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin:0;
+    padding:0;
+
     
     .activate{
-        margin-top: 1%;
+        //margin-top: 1%;
         padding:5%;
     }
     
     .login__right{
         
-        img{
-            width:50%;
-            padding: 0;
-            
-        }
+
         display: none;
 
     }
     .login__left{
         text-align: center;
+
         img{
             width:100%;
+            
         }
         input{
             padding-top:2%;
@@ -64,11 +65,13 @@
 @media (min-width: $md){
    .login{
     width: 80%;
-    margin: 5% auto;
+    margin: 0 auto;
 
     .login__left{
         width: 60%;
         text-align: left;
+        margin-right: 2%;
+  
         
 
         .btn__small{
@@ -83,6 +86,12 @@
     .login__right{
         width: 30%;
         display: flex;
+        img{
+            width:100%;
+            padding: 0;
+            
+            
+        }
     }
 
 }

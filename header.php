@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/jpeg" src="media/logo/favicon.jpeg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>E-Cobox</title>
 </head>
 <Header>
-    <div class="container">
 
-        <div class="row">
-            <div class="logo">
-                <img src="media/logo/logo_V5-8.png" height="136px">
-            </div>
+<div class="container">
+    <div class="logo">
+        <img src="./media/logo/logo_V5-8.png" alt="" width="130"/>
+    </div>
+    <nav>
+    <ul>
+    <li><a href="index.php">Accueil</a></li>
+    <li><a href="solution.php">Solutions</a></li>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="index.php">accueil</a></li>
-                    <li><a href="solution.php">solutions</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> 
+    </ul>
+    </nav>
+</div>
+
 </Header>

@@ -51,7 +51,7 @@
         
         echo"<h1>".$_SESSION['name']."</h1>";
         echo"
-        <img src='./media/bulle.png' alt='' height='150px' width='150px'>
+        <img src='./media/mail_portrait.png' alt='' height='150px' width='150px'>
 
         <div class='profil__info'><h5>Votre boite mail contient ".$mails." messages</h5></div>
         <div class='profil__info'><h5>Votre Taux de CO2 généré annuelement: ".$mailsrate." Kg de CO2</h5></div>
