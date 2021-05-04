@@ -2,11 +2,13 @@
 include 'bdd.php';
 include 'header.php';?>
 <body>
-    <div class="title">
-        <h1>La Pollution Numérique</h1>
-        <p>Quelles solutions ?</p>
+    <div class="containersolution">
+        <div class="title">
+            <h1>La Pollution Numérique</h1>
+            <p>Quelles solutions ?</p>
+        </div>
 
-        <div class="tektlink">
+        <div class="textlink">
             <div class="online"><a href=#online>
                 <h4>sur internet</h4>
                 <img src="media/pictosolution/wifi5.png" width="207px">
@@ -60,7 +62,7 @@ include 'header.php';?>
         <!--At home-->
         <div class="athometext">
 
-            <div id=" athome" class="athome">
+            <div id="athome" class="athome">
                 <h3>a la maison</h3>
                 <img src="media/pictosolution/maison4.png" width="153px">
             </div>
