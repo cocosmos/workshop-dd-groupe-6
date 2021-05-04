@@ -13,10 +13,10 @@
         <img src="media/logo/logo_V5-8.png" height="136px">
         </div>
 
-        <div class="menu">
+        <div class="menuheader">
             <ul>
                 <li><a href="index.php">accueil</a></li>
-                <li><a href="solution.php">solutions</a></li>
+                <li><a href="solutions.php">solutions</a></li>
             </ul>
         </div>
 

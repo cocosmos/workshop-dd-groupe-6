@@ -1,7 +1,7 @@
 Header{
     width: 100%;
     height: 136px;
-    max-width: 1280px;
+    max-width: 2000px;
     margin: 0 auto;
     background-color: $light-grey;
     
@@ -11,6 +11,7 @@ Header{
         height: 136px;
         max-width: 200px;
         width: 200px;
+        
     
         img{
             width: 100%;
@@ -18,11 +19,13 @@ Header{
         }
     }
     
-    .menu{
+    .menuheader{
         display: inline-block;
         position: relative;
-        top: -60px;
-
+        margin: auto;
+        top: -65px;
+        
+        
 
         ul{
             text-decoration: none;
@@ -56,18 +59,19 @@ Header{
         .logo{
             display: inline-block;
             height: 136px;
-            max-width: 200px;
-            width: 200px;
+            
+            width: 100%;
         
             img{
                 width: 100%;
-                
+                max-width: 200px;
             }
         }
 
-       .menu{
-           top: -10px;
-       }
+        .menuheader{
+            top: 1px;
+        }
+       
     }
 
 }
