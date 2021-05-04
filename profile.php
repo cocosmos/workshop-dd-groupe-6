@@ -5,7 +5,16 @@
         setcookie("password", $_SESSION['password'], time() + (86400 * 100), "/"); // 86400 = 1 day
         setcookie("name", $_SESSION['name'], time() + (86400 * 100), "/"); // 86400 = 1 day
     }
+    include "header.php";
     include "bdd.php";
+    ?>
+    <body>
+    <div class="profil">
+            <div class="container ">
+                <div class="row">
+                    <div class="profil__left">
+    <?php
+    
     if(isset($_COOKIE["password"])){
         $source=$_COOKIE["email"];
         preg_match('/@([^.]+)/i', $source, $match);
@@ -35,20 +44,46 @@
     }
     if(isset($_SESSION['info'])) {
         $mails=$_SESSION['info']->Nmsgs;
-        $mailsrate=$mails * 0.006;
+        $mailsrate=$mails * 0.009;
         
-        //Un mail = 0.006kg 
+        //Un mail = 0.009kg 
         //données pour un kilos
-        echo '<p>Votre boite aux lettres contient '.$mails.' message(s)<br> 
+        
+        echo"<h3>".$_SESSION['name']."</h3>";
+        echo"
+        <img src='./media/bulle.png' alt='' height='150px' width='150px'>
+
+        <div class='profil__info'><h5>Votre boite mail contient ".$mails." messages</h5></div>
+        <div class='profil__info'><h5>Votre Taux de CO2 généré annuelement: ".$mailsrate." Kg de CO2</h5></div>
+
+        </div>"
+        ?>
+                    <div class="profil__right">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container profil__down">
+            <h3>Avec votre boîte mail vous avez...</h3>
+            <p>utilisez <?php echo(12*$mailsrate) ?> jours d'éclairage avec une 1 ampoule Basse Consommation</p>
+            <p>parcouru <?php echo(9*$mailsrate) ?> kms avec une voiture</p>
+            <p>Consommer <?php echo(12*$mailsrate) ?> kWh d’électricité ce qui équivaut à ... heures de TV (nombre de kilo 100w) </p>
+        </div>
+
+        <?php
+        /*echo '<p>Votre boite aux lettres contient '.$mails.' message(s)<br> 
         Taux de pollution actuelle en moyenne : '.$mailsrate.' kg de CO2 par an<br></p>
         <p>La consommation de '. 12*$mailsrate.' kWh d’électricité (en France)<br> 
         '. 2*$mailsrate.' jours d’éclairage avec 1 ampoule à incandescence (et '. 12*$mailsrate.' jours avec une 1 ampoule Basse Consommation)<br> 
         La fabrication de '. 100*$mailsrate.' feuilles de papier de 80g<br> 
         La fabrication de '. 1.5*$mailsrate.'kg de sucre<br> 
         '. 9*$mailsrate.' km parcourus avec une voiture essence d’étiquette B<br> 
-        '. 6*$mailsrate.' km parcourus avec une voiture essence d’étiquette E</p>';
+        '. 6*$mailsrate.' km parcourus avec une voiture essence d’étiquette E</p>';*/
         //1 kg de co2 = 12km en avion par personne
-        echo "<a href='profile.php'>Refresh</a>";
+        echo "<a class='btn' href='profile.php'>Refresh</a>";
         //https://www.faguo-store.com/fr/lunivers-faguo/lunivers-faguo/mission-engagements/mesurer/1kg-equivalent-de-co2/
         $data = [
             ':id' => "test1", // A FAIRE
@@ -75,19 +110,14 @@
         $row = $result->fetchAll(PDO::FETCH_ASSOC);
         
         $json = json_encode($row);
-        file_put_contents("data.json", $json); 
+        file_put_contents("./js/data.json", $json); 
     }
     else{
         header("Location: register.php");
     }
 ?>
-<body>
-    <div class="container">
-        <canvas id="myChart"></canvas>
-    </div>
+
 
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="./chart.js"></script>
+<?php include "footer.php";

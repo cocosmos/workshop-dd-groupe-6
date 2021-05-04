@@ -1,0 +1,58 @@
+
+.profil{
+    background-color: $light-grey;
+    height: 100%;
+}
+.container{
+    max-width: 1280px; 
+    margin: 0 auto;
+    padding:5%;
+
+    .row{
+        flex-wrap: wrap;
+        display: flex;
+        box-sizing: border-box;
+
+        .profil__left{
+            width: 100%;
+            
+            .profil__info{
+                background-color: $dark-blue;
+                width: 95%;
+                padding: 2%;
+                margin-bottom: 1%;
+                margin-top: 1%;
+            }
+    
+        }
+    
+        .profil__right{
+            width:100%;
+            
+        }
+    
+    }
+    
+   
+}
+
+
+@media (min-width: $md) {
+    .container{
+        .row{
+            .profil__left{
+                width: 50%;
+
+                .profil__info{
+                    background-color: $dark-blue;
+                    width: 70%;
+                }
+            }
+            .profil__right{
+                width:50%;
+
+            }
+        
+        }
+    }
+}

@@ -10,7 +10,7 @@ include 'header.php';?>
     <h1>E-Cobox vous aide à comprendre comment réduire sa Pollution numérique</h1>
 
     <div class="button">
-        <a href="connection.php">Connectez votre boîte mail</a>
+        <a href="register.php">Connectez votre boîte mail</a>
         <p>* E-Cobox s'engage à ne garder aucune information sur votre boîte mail</p>
     </div>
 </body>

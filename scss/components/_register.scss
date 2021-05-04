@@ -1,0 +1,129 @@
+.body__login{
+    background-color:#0A4754;
+    margin: 1% auto;
+
+}
+//Login Part
+.login{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    .activate{
+        margin-top: 1%;
+        padding:5%;
+    }
+    
+    .login__right{
+        
+        img{
+            width:50%;
+            padding: 0;
+            
+        }
+        display: none;
+
+    }
+    .login__left{
+        text-align: center;
+        img{
+            width:100%;
+        }
+        input{
+            padding-top:2%;
+            padding-bottom:2%;
+            padding-left: 2%;
+            width: 90%;
+            font-size: 20px;
+            margin-top: 3%;
+        }
+        
+        .btn{
+            width: 90%;
+            height: 100%;
+
+        }
+        .step__left{
+            padding-bottom: 5%;
+            .btn{
+                line-height: 40px;
+            }
+
+        }
+
+    }
+    p{
+        color:$white;
+
+    }
+
+}
+
+@media (min-width: $md){
+   .login{
+    width: 80%;
+    margin: 5% auto;
+
+    .login__left{
+        width: 60%;
+        text-align: left;
+        height: 500px;
+
+        .btn__small{
+            width:17vh;
+            float: right;
+        }
+        input{
+            width:96%;
+        }
+    }
+
+    .login__right{
+        width: 30%;
+        display: flex;
+    }
+
+}
+
+}
+
+//Accordion Part
+.accordion {
+    background-color: $light-green;
+    color: $dark-blue;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-family: $secondary-font;
+    font-size: 2vh;
+
+  }
+  
+  .active, .accordion:hover {
+    background-color: $light-grey;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .answer {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
