@@ -20,7 +20,5 @@
             </ul>
         </div>
 
-        <div class="profile">
-            <a href="profile.php"></a>
-        </div>
+        
     </Header>
