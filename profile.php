@@ -35,7 +35,7 @@
 
         if (FALSE === $conn) {
             $info = FALSE;
-            echo "La connexion a échoué. Réésayez en créant un autre mot de passe d'applications";
+            echo "<h6>La connexion a échoué. Réésayez en créant un autre mot de passe d'applications</h6>";
         } else {
             $info = imap_check($conn);
             $_SESSION['info']=$info;
@@ -67,10 +67,11 @@
             </div>
         </div>
         <div class="container profil__down">
-            <h1>Avec votre boîte mail vous avez...</h1>
-            <p>utilisez <?php echo(12*$mailsrate) ?> jours d'éclairage avec une 1 ampoule Basse Consommation</p>
-            <p>parcouru <?php echo(9*$mailsrate) ?> kms avec une voiture</p>
-            <p>Consommer <?php echo(12*$mailsrate) ?> kWh d’électricité ce qui équivaut à ... heures de TV (nombre de kilo 100w) </p>
+            <h1>Avec votre boîte mail c'est comme si en 1 an vous avez...</h1>
+            <p>Parcouru <?php echo(7*$mailsrate) ?> kms en avion.</p>
+            <p>Ou parcouru <?php echo(5*$mailsrate) ?> kms avec une voiture.</p>
+            <p>Ou Consommer <?php echo(12*$mailsrate) ?> kWh d’électricité ce qui équivaut à ... heures de TV (nombre de kilo 100w) </p>
+            <p>Ou Mangez <?php echo(80*$mailsrate) ?> grammes de viande de boeuf. </p>
         </div>
 
         <?php
@@ -83,7 +84,6 @@
         '. 9*$mailsrate.' km parcourus avec une voiture essence d’étiquette B<br> 
         '. 6*$mailsrate.' km parcourus avec une voiture essence d’étiquette E</p>';*/
         //1 kg de co2 = 12km en avion par personne
-        echo "<a class='btn' href='profile.php'>Refresh</a>";
         //https://www.faguo-store.com/fr/lunivers-faguo/lunivers-faguo/mission-engagements/mesurer/1kg-equivalent-de-co2/
         $data = [
             ':id' => "test1", // A FAIRE

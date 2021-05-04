@@ -4,7 +4,12 @@ h1{
     font-family: $primary-font;
     font-weight: 400;
 }
-
+h6{
+    color:rgb(255, 0, 0);
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: $primary-font;
+}
 
 h2{
     font-size: 2em;
@@ -45,7 +50,7 @@ input{
     background-color: $light-green;
     padding:15px 25px;
     border-radius: 25px;
-    font-size: 1.6vh;
+    font-size: 1em;
     font-weight: 900;
     border: none;
     color:$dark-blue;

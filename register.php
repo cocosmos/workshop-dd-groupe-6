@@ -6,7 +6,7 @@
         <div class="container login">
             <div class="login__left">
     <?php
-
+    error_reporting(0);
     session_start();
     if(!isset($_REQUEST["email"])){
        echo" <h2>Connectez votre boîte mail</h2>
@@ -36,45 +36,50 @@
         $_SESSION['steps']=$row['type'];
         switch($_SESSION['steps']){
             case "gmail":
-                echo "<h2>Activer la double authentifation sur Gmail</h2>
-                <p>Pour vous connecter en toute sécurité veuillez activer la double authentification.</p>
+                echo "<h2>Activez la double authentifation sur Gmail</h2>
+                <p>Pour vous connecter en toute sécurité veuillez activer la double authentification en cliquant sur le bouton 'Ce n'est pas activée !'.</p>
                 <button class='accordion'>Aide</button>
                 <div class='answer'><a href='https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome?gar=1' target='_blank'><img src='./media/helpsetup/gmail/1.PNG' alt='gmail'></a></div>
                 <div class='activate'>
                 <a class='btn' href='passwordapp.php'>C'est activé !</a>
                 <a class='btn' href='https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome?gar=1' target='_blank'>Ce n'est pas activé !</a></div>";
+                
             break;
         
             case "outlook":
-                echo "<h2>Activer la double authentifation sur Outlook</h2>
-                <p>Pour vous connecter en toute sécurité veuillez activer la double authentification.</p>
+                echo "<h2>Activez la double authentifation sur Outlook</h2>
+                <p>Pour vous connecter en toute sécurité veuillez activer la double authentification en cliquant sur le bouton 'Ce n'est pas activée !'.</p>
                 <button class='accordion'>Aide</button>
                 <div class='answer'><a href='https://account.live.com/proofs/EnableTfa' target='_blank'><img src='./media/helpsetup/outlook/1.PNG' alt='gmail'></a></div>
                 <div class='activate'>
                 <a class='btn' href='passwordapp.php'>C'est activé !</a>
                 <a class='btn' href='https://account.live.com/proofs/EnableTfa' target='_blank'>Ce n'est pas activé !</a></div>";
+                
             break;
         
             case "yahoo":
-                echo "<h2>Activer la double authentifation sur Yahoo</h2>
-                <p>Pour vous connecter en toute sécurité veuillez activer la double authentification.</p>
+                echo "<h2>Activez la double authentifation sur Yahoo</h2>
+                <p>Pour vous connecter en toute sécurité veuillez activer la double authentification en cliquant sur le bouton 'Ce n'est pas activée !'.</p>
                 <button class='accordion'>Aide</button>
                 <div class='answer'><a href='https://login.yahoo.com/myaccount/security/two-step-verification/?src=ym&activity=ybar-acctinfo&pspid=159600017&.done=https%253A%252F%252Fmail.yahoo.com%252F&.scrumb=Re61Vnttrtc' target='_blank'><img src='./media/helpsetup/yahoo/1.PNG' alt='gmail'></a></div>
                 <div class='activate'>
                 <a class='btn' href='passwordapp.php'>C'est activé !</a>
                 <a class='btn' href='https://login.yahoo.com/myaccount/security/two-step-verification/?src=ym&activity=ybar-acctinfo&pspid=159600017&.done=https%253A%252F%252Fmail.yahoo.com%252F&.scrumb=Re61Vnttrtc' target='_blank'>Ce n'est pas activé !</a></div>";
+                
             break;
         
             case "icloud":
                 echo "<a href='#'>J'ai activé la double auth</a>
                 <a href='#'>Je n'ai pas activé la double auth</a>";
+                
             break;
             case "simple":
                 echo "<br><form method='post'><label for='password'>Mot de passe de votre email :</label><br><input type='password' name='password' placeholder='Mot de passe' required><button class='btn btn_small' type='submit'>Submit</button></form>";
             break;
             
             default:
-                echo "<p>votre email n'est pas encore supporté essayez en un autre</p>";//si email existe pas et qu il n est pas. ce fourniseur n est pas encore supportee utilsier un email de la liste suivante
+                echo "<h6>Votre email n'est pas encore supporté essayez en un autre.</h6>";//si email existe pas et qu il n est pas. ce fourniseur n est pas encore supportee utilsier un email de la liste suivante
+                echo "<a class ='btn' href='register.php'>Réessayez</a>";
             break;
         }
         if(isset($_REQUEST["password"])){
@@ -111,3 +116,4 @@
 <?php
     require "footer.php";
     ?>
+    
