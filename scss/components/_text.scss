@@ -2,7 +2,7 @@ h1{
     font-size: 2em;
     color: $dark-green;
     font-family: $primary-font;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 
@@ -44,16 +44,18 @@ input{
     background-color: $light-green;
     padding:15px 25px;
     border-radius: 25px;
-    font-size: 2vh;
+    font-size: 1.6vh;
     font-weight: 900;
     border: none;
     color:$dark-blue;
     margin-top: 5%;
     margin-bottom: 5%;
     text-decoration: none;
+    text-transform: uppercase;
 }
 .btn__dark{
     background-color: $dark-blue;
     color:$white;
     font-size: 1em;
 }
+button { cursor:pointer; }

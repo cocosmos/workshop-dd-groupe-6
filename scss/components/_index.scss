@@ -1,43 +1,86 @@
 .index{
     //background-image: url(../media/gif/nrj.gif);
+    .index__left{
+        width:100%;
+        order: 2;
+        
+    }
+
+    .index__right{
+        width:100%;
+        img{
+            width: 40%;
+        }
+        order: 1;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    
+
     p{
-        font-size: 1em;
+        font-size: 1.4em;
     }
     .button__right{
         width: 100%;
         text-align: center;
+        margin-top: 7%;
+       
         p{
             font-family: $secondary-font;
-            font-size: 0.6em;
-            line-height: 3em;
+            font-size: 0.8em;
+            line-height: 3.5em;
+           
         }
         
         .btn__dark{
             text-align: center;
+            padding: 15px 60px;
+            
         }
     
     }
     .button__left{
         width: 100%;
+        img{
+            width: 60%;
+        }
     }
     .row{
-        margin-top: 15%;
+        margin-top: 1%;
     }
     
 }
 @media (min-width: $md) {
     .index{
+        .row{
+            margin-top: 1%;
+        }
         .button__right{
-            p{
-                font-family: $secondary-font;
-                font-size: 0.6em;
-                line-height: 3em;
-            }
+            
             width: 50%;
             text-align: left;
         }
         .button__left{
             width: 50%;
+            img{
+                width: 70%;
+            }
+           
+        }
+        .index__left{
+            width:60%;
+            order: 1;
+        }
+    
+        .index__right{
+            width:30%;
+            margin-right:-10%;
+            img{
+                width: 100%;
+            }
+            order: 2;
+            display: block;
         }
     }
 }
