@@ -33,10 +33,19 @@
         }
     }
     .textlink{
+
+        .online{
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            img{
+                align-self: center;
+            }
+        }
         a{
             text-decoration: none; 
 
-            
+
         }
     }
 
@@ -45,6 +54,8 @@
 .solutiontext{
 
     .onlinetext{
+
+       
         h1{
             color: $dark-green;
             font-family: $primary-font;

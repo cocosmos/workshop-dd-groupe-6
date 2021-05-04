@@ -63,7 +63,7 @@ include 'header.php';?>
         <div class="athometext">
 
             <div id="athome" class="athome">
-                <h3>a la maison</h3>
+                <h4>a la maison</h4>
                 <img src="media/pictosolution/maison4.png" width="153px">
             </div>
 
