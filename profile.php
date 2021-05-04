@@ -48,8 +48,8 @@
         
         //Un mail = 0.009kg 
         //données pour un kilos
-        if(isset($_SESSION["name"])){
-            echo("<h3>".$_COOKIE["name"]."</h3>");}
+        
+        echo"<h3>".$_SESSION['name']."</h3>";
         echo"
         <img src='./media/bulle.png' alt='' height='150px' width='150px'>
 
@@ -109,7 +109,7 @@
         $row = $result->fetchAll(PDO::FETCH_ASSOC);
         
         $json = json_encode($row);
-        file_put_contents("data.json", $json); 
+        file_put_contents("./js/data.json", $json); 
     }
     else{
         header("Location: register.php");
