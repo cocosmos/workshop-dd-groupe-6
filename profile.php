@@ -49,9 +49,9 @@
         //Un mail = 0.009kg 
         //données pour un kilos
         
-        echo"<h3>".$_SESSION['name']."</h3>";
+        echo"<h1>".$_SESSION['name']."</h1>";
         echo"
-        <img src='./media/bulle.png' alt='' height='150px' width='150px'>
+        <img src='./media/mail_portrait.png' alt='' height='150px' width='150px'>
 
         <div class='profil__info'><h5>Votre boite mail contient ".$mails." messages</h5></div>
         <div class='profil__info'><h5>Votre Taux de CO2 généré annuelement: ".$mailsrate." Kg de CO2</h5></div>
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="container profil__down">
-            <h3>Avec votre boîte mail vous avez...</h3>
+            <h1>Avec votre boîte mail vous avez...</h1>
             <p>utilisez <?php echo(12*$mailsrate) ?> jours d'éclairage avec une 1 ampoule Basse Consommation</p>
             <p>parcouru <?php echo(9*$mailsrate) ?> kms avec une voiture</p>
             <p>Consommer <?php echo(12*$mailsrate) ?> kWh d’électricité ce qui équivaut à ... heures de TV (nombre de kilo 100w) </p>
@@ -99,7 +99,6 @@
         ); 
         $response->execute($data);
 
-    }
         //Data for the chart put into the json
         $result = $db->prepare(
             "SELECT user_data, data_date FROM user_data WHERE user_id='test1' GROUP BY data_date",
