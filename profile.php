@@ -67,11 +67,11 @@
             </div>
         </div>
         <div class="container profil__down">
-            <h1>Avec votre boîte mail c'est comme si en 1 an vous avez...</h1>
-            <p>Parcouru <?php echo(7*$mailsrate) ?> kms en avion.</p>
-            <p>Ou parcouru <?php echo(5*$mailsrate) ?> kms avec une voiture.</p>
-            <p>Ou Consommer <?php echo(12*$mailsrate) ?> kWh d’électricité ce qui équivaut à ... heures de TV (nombre de kilo 100w) </p>
-            <p>Ou Mangez <?php echo(80*$mailsrate) ?> grammes de viande de boeuf. </p>
+            <h1>Avec votre boîte mail c'est comme si en une année vous avez...</h1>
+            <p>Parcouru <h1><?php echo(7*$mailsrate) ?></h1> kms en avion.</p>
+            <p>Ou conduit <h1><?php echo(5*$mailsrate) ?></h1> kms avec une voiture.</p>
+            <p>Ou pris <h1><?php echo(0.5*$mailsrate) ?></h1> douches ou <h1><?php echo(0.125*$mailsrate) ?></h1>bains.</p>
+            <p>Ou mangez <h1><?php echo(80*$mailsrate) ?></h1> grammes de viande de boeuf. </p>
         </div>
 
         <?php
