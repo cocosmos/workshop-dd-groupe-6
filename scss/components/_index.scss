@@ -1,0 +1,43 @@
+.index{
+    //background-image: url(../media/gif/nrj.gif);
+    p{
+        font-size: 1em;
+    }
+    .button__right{
+        width: 100%;
+        text-align: center;
+        p{
+            font-family: $secondary-font;
+            font-size: 0.6em;
+            line-height: 3em;
+        }
+        
+        .btn__dark{
+            text-align: center;
+        }
+    
+    }
+    .button__left{
+        width: 100%;
+    }
+    .row{
+        margin-top: 15%;
+    }
+    
+}
+@media (min-width: $md) {
+    .index{
+        .button__right{
+            p{
+                font-family: $secondary-font;
+                font-size: 0.6em;
+                line-height: 3em;
+            }
+            width: 50%;
+            text-align: left;
+        }
+        .button__left{
+            width: 50%;
+        }
+    }
+}

@@ -1,13 +1,20 @@
+<link rel="stylesheet" href="./css/style.css">
 <footer>
-    <h4>retrouve les bon plans ici!</h4>
-    <ul>
-        <li><a><img src="media/logofooter/cleanfox.png"></a></li>
-        <li><a><img src="media/logofooter/ecomail.png"></a></li>
-        <li><a><img src="media/logofooter/Ecosia.png"></a></li>
-        <li><a><img src="media/logofooter/lilo.png"></a></li>
-        <li><a><img src="media/logofooter/Newmanity.png"></a></li>
-        <li><a><img src="media/logofooter/unroll-me.png"></a></li>
-    </ul>
+
+    <div class="container">
+    <h4>retrouve tous les bons plans ici!</h4>
+        
+        
+        <ul>
+            <li><a href="#"><img src="./media/logofooter/logo_appli1.svg"></a></li>
+            <li><a><img src="media/logofooter/logo_appli2.svg"></a></li>
+            <li><a><img src="media/logofooter/logo_appli3.svg"></a></li>
+            <li><a><img src="media/logofooter/logo_appli4.svg"></a></li>
+            <li><a><img src="media/logofooter/logo_appli5.svg"></a></li>
+        </ul>
+
+    </div>
+
 
 </footer>
 <script src="./js/accordion.js"></script>

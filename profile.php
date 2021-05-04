@@ -49,7 +49,7 @@
         //Un mail = 0.009kg 
         //données pour un kilos
         
-        echo"<h3>".$_SESSION['name']."</h3>";
+        echo"<h1>".$_SESSION['name']."</h1>";
         echo"
         <img src='./media/bulle.png' alt='' height='150px' width='150px'>
 
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="container profil__down">
-            <h3>Avec votre boîte mail vous avez...</h3>
+            <h1>Avec votre boîte mail vous avez...</h1>
             <p>utilisez <?php echo(12*$mailsrate) ?> jours d'éclairage avec une 1 ampoule Basse Consommation</p>
             <p>parcouru <?php echo(9*$mailsrate) ?> kms avec une voiture</p>
             <p>Consommer <?php echo(12*$mailsrate) ?> kWh d’électricité ce qui équivaut à ... heures de TV (nombre de kilo 100w) </p>
