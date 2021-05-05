@@ -19,10 +19,18 @@ include 'header.php';?>
                 <div class="button__left">
                     <img src="./media/GIF/3.gif" alt="" width="460" >
                 </div>
-                <div class="button__right">
-                    <a class="btn btn__dark" href="register.php">Connectez votre boîte mail</a>
+                <?php if(!isset($_COOKIE["name"])){
+                    echo "<div class='button__right'>
+                    <a class='btn btn__dark' href='register.php'>Connectez votre boîte mail</a>
                     <p>*E-Cobox s'engage à ne garder aucune information sur votre boîte mail</p>
-                </div>
+                    </div>";
+                }else{
+                    echo "<div class='button__right'>
+                    <a class='btn btn__dark' href='profile.php'>Voir le profil</a>
+                    </div>";
+                }
+                ?>
+                
             </div>
         </div>
     </div>

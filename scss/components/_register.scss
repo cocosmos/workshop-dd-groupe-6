@@ -1,6 +1,10 @@
+
 .body__login{
     background-color:#0A4754;
     margin: 0% ;
+    .container{
+        max-width: $container;
+    }
 
 }
 //Login Part
@@ -17,6 +21,8 @@
     .activate{
         //margin-top: 1%;
         padding:5%;
+   
+
     }
     
     .login__right{
@@ -27,11 +33,12 @@
     }
     .login__left{
         text-align: center;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 20%;
+        margin-bottom: 20%;
 
         img{
             width:100%;
+
             
         }
         input{
@@ -44,7 +51,7 @@
         }
         
         .btn{
-            width: 90%;
+            width: 80%;
             height: 100%;
             margin-right: 2%;
 
@@ -75,11 +82,13 @@
         width: 60%;
         text-align: left;
         margin-right: 2%;
+        margin-top: 5%;
+        margin-bottom: 5%;
   
         
 
         .btn__small{
-            width:17vh;
+            width:16vh;
             float: right;
         }
         input{

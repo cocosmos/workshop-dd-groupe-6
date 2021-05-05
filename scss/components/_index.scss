@@ -19,7 +19,7 @@
     
 
     p{
-        font-size: 1.4em;
+        font-size: 1.6em;
     }
     .button__right{
         width: 100%;
@@ -28,14 +28,14 @@
        
         p{
             font-family: $secondary-font;
-            font-size: 0.8em;
+            font-size: 1em;
             line-height: 3.5em;
            
         }
         
         .btn__dark{
             text-align: center;
-            padding: 15px 60px;
+            padding: 15px 30px;
             
         }
     
@@ -58,11 +58,11 @@
         }
         .button__right{
             
-            width: 50%;
+            width: 60%;
             text-align: left;
         }
         .button__left{
-            width: 50%;
+            width: 40%;
             img{
                 width: 70%;
             }

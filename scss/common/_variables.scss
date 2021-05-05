@@ -21,3 +21,15 @@ $light-grey:#F0F0F2;
 $white:#FFFFFF;
 $dark-green:#6BC2BA;
 $dark-grey: #999798;
+
+.container{
+    max-width: $lg; 
+    margin: 0 auto;
+    padding:5%;
+
+    .row{
+        flex-wrap: wrap;
+        display: flex;
+        box-sizing: border-box;
+    }
+}

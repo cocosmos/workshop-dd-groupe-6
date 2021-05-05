@@ -9,16 +9,19 @@
     <title>E-Cobox</title>
 </head>
     <Header>
-        <div class="logo">
-        <img src="media/logo/logo_V5-8.png" height="136px">
-        </div>
+    <div class="container">
+    <div class="logo">
+        <img src="./media/logo/logo_V5-8.png" alt="" width="130"/>
+    </div>
+    <nav>
+    <ul>
+    <li><a href="index.php">Accueil</a></li>
+    <li><a href="solutions.php">Solutions</a></li>
 
-        <div class="menuheader">
-            <ul>
-                <li><a href="index.php">accueil</a></li>
-                <li><a href="solutions.php">solutions</a></li>
-            </ul>
-        </div>
+    </ul>
+    </nav>
+</div>
+
 
         
     </Header>
