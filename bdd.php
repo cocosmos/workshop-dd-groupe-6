@@ -1,5 +1,5 @@
 <?php
-require ('../bdd_connect.php');
+require ('bdd_connect.php');
 $db = new PDO(
 'mysql:host='.$host.';dbname='.$dbname.'', 
 $admin, $db_password,   

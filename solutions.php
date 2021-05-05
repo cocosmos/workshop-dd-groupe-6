@@ -54,13 +54,13 @@ include 'header.php';?>
                 </div>
 
                 <div class="monstre1__right">
-                    <img src="./media/gif/lourd-2.gif" alt="" >
+                    <img src="media/gif/lourd-2.gif" alt="" width="500">
                 </div>
             </div>
 
             <div class="row case">
                 <div class="monstre2__left">
-                    <img src="./media/gif/nrj-bleu-2.gif" alt="" width="500">
+                    <img src="media/gif/nrj-bleu-2.gif" alt="" width="500">
                 </div>
                 <div class="monstre2__right">
                     <div>
@@ -100,7 +100,7 @@ include 'header.php';?>
                     </div>
                 </div>
                 <div class="monstre3__right">
-                    <img src="./media/gif/mail.gif" alt="" >
+                    <img src="./media/gif/mail.gif" alt="" width="500">
                 </div>
             </div>
             <div class="case texte_vison">
@@ -109,7 +109,7 @@ include 'header.php';?>
             </div>
             <div class="row case">
                 <div class="monstre4__left">
-                    <img src="./media/gif/spam-2.gif" alt="">
+                    <img src="./media/gif/spam-2.gif" alt="" width="500">
                 </div>
                 <div class="monstre4__right">
                     <div class="case">
@@ -141,8 +141,8 @@ include 'header.php';?>
             </div>
             <div class="row">
                 <div class="monstre5__left">
-                    <img class="monstre_5" src="./media/gif/news-2.gif" alt="">
-                    <img class="monstre_2" src="./media/gif/nrj-bleu-2.gif" alt="">
+                    <img class="monstre_5" src="./media/gif/news-2.gif" alt="" width="500">
+                    <img class="monstre_2" src="./media/gif/nrj-bleu-2.gif" alt="" width="500">
                 </div>
                 <div class="monstre5__right">
                     <div class="case">

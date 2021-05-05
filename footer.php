@@ -3,7 +3,6 @@
     <div class="container">
     <h4>retrouve tous les bons plans ici!</h4>
         
-        
         <ul>
             <li><a href="https://gdpr-eu.unroll.me/" target="_blank"><img src="./media/logofooter/logo_appli1.svg"></a></li>
             <li><a href="https://www.ecomail.fr/" target="_blank"><img src="media/logofooter/logo_appli2.svg"></a></li>

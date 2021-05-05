@@ -11,13 +11,13 @@ include 'header.php';?>
                     <h1>E-Cobox vous aide à comprendre comment réduire sa Pollution numérique</h1>
                 </div>
                 <div class="index__right">
-                    <img src="./media/GIF/2.gif" alt="" width="460">
+                    <img src="media/GIF/2.gif" alt="" width="460">
                 </div>
     
             </div>
             <div class="row">
                 <div class="button__left">
-                    <img src="./media/GIF/3.gif" alt="" width="460" >
+                    <img src="media/GIF/3.gif" alt="" width="460" >
                 </div>
                 <?php if(!isset($_COOKIE["name"])){
                     echo "<div class='button__right'>

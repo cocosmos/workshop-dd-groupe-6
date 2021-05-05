@@ -44,20 +44,20 @@ if(isset($_SESSION["steps"])){
         <div class='step__left'>
             <p><b>Etape 2 :</b> Cliquez sur 'Sélectionnez une Application', puis sur 'Autre'. </p>
             <button class='accordion'>Aide</button>
-            <div class='answer'><img src='./media/helpsetup/GMAIL/2.PNG' alt=''></div>
+            <div class='answer'><img src='./media/helpsetup/gmail/2.png' alt=''></div>
 
         </div>
         
         <div class='step__left'>
             <p><b>Etape 3 :</b> Écrivez 'E-cobox' puis cliquez sur 'Générer'.</p>
             <button class='accordion'>Aide</button>
-            <div class='answer'><img src='./media/helpsetup/GMAIL/3.PNG' alt=''></div>
+            <div class='answer'><img src='./media/helpsetup/gmail/3.png' alt=''></div>
         </div>
 
         <div class='step__left'>
             <p><b>Etape 4 :</b> Copiez le code de 16 caractères qui s'affiche sur fond jaune.</p>
             <button class='accordion'>Aide</button>
-            <div class='answer'><img src='./media/helpsetup/GMAIL/4.PNG' alt=''></div>
+            <div class='answer'><img src='./media/helpsetup/gmail/4.png' alt=''></div>
         </div>";
         break;
 
@@ -83,13 +83,13 @@ if(isset($_SESSION["steps"])){
         <div class='step__left'>
             <p><b>Etape 2 :</b> Écrivez 'E-cobox' puis cliquez sur 'Générer'.</p>
             <button class='accordion'>Aide</button>
-            <div class='answer'><img src='./media/helpsetup/yahoo/2.PNG' alt=''></div>
+            <div class='answer'><img src='./media/helpsetup/yahoo/2.png' alt=''></div>
         </div>
 
         <div class='step__left'>
             <p><b>Etape 3 :</b> Copiez le code de 16 caractères qui s'affiche.</p>
             <button class='accordion'>Aide</button>
-            <div class='answer'><img src='./media/helpsetup/yahoo/3.PNG' alt=''></div>
+            <div class='answer'><img src='./media/helpsetup/yahoo/3.png' alt=''></div>
         </div>";
         break;
 
