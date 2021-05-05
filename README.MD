@@ -1,4 +1,4 @@
-# Workshop Design & Developpement
+# E-cobox
 ## Groupe 6
 ### Deadline : 05.05.2021
 
